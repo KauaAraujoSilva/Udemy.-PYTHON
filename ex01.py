@@ -9,7 +9,7 @@ if nome!=' ' and idade > 0:
     else:
         print('Seu nome não contem espaços')
     if espaco in nome:
-        print(f'Seu nome tem {len(nome) - len(espaco)} letras') #por que q ta dando errado?
+        print(f'Seu nome tem {len(nome) - len(espaco)} letras')
     elif nome:
         print(f'Seu nome tem {len(nome)} letras')
 
