@@ -17,15 +17,16 @@ except ValueError:
     print('Digite apenas numero!')'''
 
 #exercicio 3
-lista = []
+'''lista = []
 posicao = []
 for nome in range(5):
     nome = input('Digite seu nome: ')
     lista.append(nome)
+    print(nome)
 try:
     posicao = int(input('Digite uma posição: '))
     print(lista[posicao])
 except IndexError:
     print('posição errada')
 except:
-    print('Digite apenas numero.')
+    print('Digite apenas numero.')'''
