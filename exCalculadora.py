@@ -22,7 +22,7 @@ while True:
         print('Digite apenas dos operadores permitidos.')
     elif len(operador) > 1:
         print('Digite apenas um dos operadores permitidos.')
-    print('O resultado da sua conta está sendo processado... ',)
+    print('O resultado da sua conta está sendo processado... ')
     sleep(1)
     if operador == '+':
         print(f'{num_1_float} + {num_2_float} = ',num_1_float + num_2_float)
@@ -32,7 +32,6 @@ while True:
         print(f'{num_1_float} * {num_2_float} = ',num_1_float * num_2_float)
     if operador == '/':
         print(f'{num_1_float} / {num_2_float} = ',num_1_float / num_2_float)
-
     sair = input('Deseja [s]air?: ').lower().startswith('s')
     if sair is True:
         break
