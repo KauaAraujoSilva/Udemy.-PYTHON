@@ -10,7 +10,7 @@ while True:
         num_1_float = float(numero_1)
         num_2_float = float(numero_2)
         numerosValidos = True
-    except:
+    except ValueError:
         numerosValidos = False
 
     if numerosValidos == False:
@@ -19,19 +19,23 @@ while True:
     operador_permitido = '+*/-'
     if operador not in operador_permitido or len(operador) != 1:
         print('Digite um operador permitido.')
+        continue
 
     print('O resultado está sendo processado...')
     sleep(1)
     if operador == '+':
-        print(f'{num_1_float} + {num_2_float} = ', num_1_float + num_2_float )
+        print(f'{num_1_float} + {num_2_float} = {num_1_float + num_2_float}' )
     elif operador == '-':
-        print(f'{num_1_float} - {num_2_float} = ', num_1_float - num_2_float )
+        print(f'{num_1_float} - {num_2_float} = {num_1_float - num_2_float}' )
     elif operador == '*':
-        print(f'{num_1_float} * {num_2_float} = ', num_1_float * num_2_float )
+        print(f'{num_1_float} * {num_2_float} = {num_1_float * num_2_float}' )
     elif operador == "/":
-        print(f'{num_1_float} / {num_2_float} = ', num_1_float / num_2_float )
+        if num_2_float == 0:
+            print('Não é possivel dividir por 0.')
+            continue
+        print(f'{num_1_float} / {num_2_float} = {num_1_float / num_2_float}' )
 
     sair = input('Deseja [s]air?: ').lower().startswith('s')
-    if sair == True:
+    if sair:
         break
 print('Você saiu do sistema')
