@@ -1,0 +1,37 @@
+from time import sleep
+while True:
+    numero_1 = input('Digite um numero: ')
+    numero_2 = input('Digite outro numero: ')
+    operador = input('Digite o operador(+-*/): ')
+
+    numerosValidos = True
+
+    try:
+        num_1_float = float(numero_1)
+        num_2_float = float(numero_2)
+        numerosValidos = True
+    except:
+        numerosValidos = False
+
+    if numerosValidos == False:
+        print('Um dos numeros não é valido.')
+        continue
+    operador_permitido = '+*/-'
+    if operador not in operador_permitido or len(operador) != 1:
+        print('Digite um operador permitido.')
+
+    print('O resultado está sendo processado...')
+    sleep(1)
+    if operador == '+':
+        print(f'{num_1_float} + {num_2_float} = ', num_1_float + num_2_float )
+    elif operador == '-':
+        print(f'{num_1_float} - {num_2_float} = ', num_1_float - num_2_float )
+    elif operador == '*':
+        print(f'{num_1_float} * {num_2_float} = ', num_1_float * num_2_float )
+    elif operador == "/":
+        print(f'{num_1_float} / {num_2_float} = ', num_1_float / num_2_float )
+
+    sair = input('Deseja [s]air?: ').lower().startswith('s')
+    if sair == True:
+        break
+print('Você saiu do sistema')
