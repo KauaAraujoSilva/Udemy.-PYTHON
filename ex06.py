@@ -6,3 +6,8 @@ contador = 0
 while contador < len(nome):
     print(f'*{nome[contador]}', end='')
     contador+=1
+
+#ler os indices dessa lista:
+lista = ['maria', 'joao', 'pedro']
+for lista in range(0, len(lista)):
+    print(lista)
