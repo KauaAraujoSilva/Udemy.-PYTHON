@@ -1,5 +1,6 @@
 from re import sub #importa uma classe que so permita numeros ate a quant. desejada
 from sys import exit #sai do programa
+
 entrada = input('Digite o CPF: ') 
 cpf_enviado_pelo_usuario = sub(r'[^0-9]', '', entrada) 
 
