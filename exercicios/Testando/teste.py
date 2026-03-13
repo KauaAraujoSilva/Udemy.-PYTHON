@@ -1,0 +1,11 @@
+n = int(input('Quantos termos você quer mostrar?: '))
+valor1 = 0
+valor2 = 1
+cont = 3
+print(f'{valor1} - {valor2}', end=' - ')
+while cont<=n:
+    valor3 = valor1 + valor2
+    print(valor3, end=' - ')
+    valor1 = valor2
+    valor2=valor3
+    cont+=1
