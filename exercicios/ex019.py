@@ -38,4 +38,4 @@ volkswagen = Fabricante('Volkswagen')
 motor_1_0 = Motor('1.0')
 fusca.fabricante = volkswagen
 fusca.motor = motor_1_0
-print(fusca.nome, fusca.fabricante.nome_fabricante, fusca.motor.nome_motor)
+print(fusca.nome, fusca.fabricante.nome, fusca.motor.nome)
